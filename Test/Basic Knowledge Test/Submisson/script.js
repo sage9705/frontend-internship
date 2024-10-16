@@ -42,12 +42,4 @@ filterName.addEventListener("input", (e) => {
 });
 
 
-product = data.map((product) => {
-    const productss = productName.content.cloneNode(true).children[0];
-    const header = productss.getElementsByClassName("description");
-    const image = productss.getElementsByClassName("image");
-    header.textContent = product.name;
-    image.textContent = product.category;
-    productName.append(product);
-    return { name: product.name, category: product.image, element: products };
-});
+

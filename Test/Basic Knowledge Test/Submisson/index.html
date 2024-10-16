@@ -15,7 +15,7 @@
             <li><a href="#home" >Home</a></li>
             <li><a href="#products">Products</a></li>
             <li><a href="#about_us">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" >Contact</a></li>
         </ul>
     </nav>
 
@@ -63,17 +63,32 @@
         <input type="filter" id="filter" placeholder="Filter by product name..." data-filter> 
     </div>
 
-    <div class="products" data-products>
+    <div class="products" id="products" data-products>
         <div class="product1">
+            <div class="colors">
+                <span class="colorDots black" onclick="changeColor(black)">
+                    <img src="images/airforce black.jpg" alt="airforce black" id="toggle">
+                </span>
+                <span class="colorDots red" onclick="changeColor(red)">
+                    <img src="images/airforce red.jpg" alt="airforce red" id="toggle">
+                </span>
+                <span class="colorDots blue" onclick="changeColor(blue)">
+                    <img src="images/airforce blue.jpg" alt="airforce blue" id="toggle">
+                </span>
+                <span class="colorDots white" onclick="changeColor(white)">
+                    <img src="images/airforce white.jpg" alt="airforce white" id="toggle">
+                </span>
+            </div>
+            <div class="image">
+                <img src="images/airforce 1.jpg" alt="airforce" style="width:100%">
+            </div>
             <div class="description">
                 <h3>Airforce</h3>
                 <h5>price</h5>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, omnis consectetur dolores, nesciunt unde, atque repellat quia dicta voluptas nemo dolorum eum sint accusamus dolor commodi? Excepturi inventore quae asperiores assumenda quia fugit praesentium rem quidem pariatur velit, neque cum minus expedita alias sapiente cupiditate! Nobis, in facere molestiae veritatis illum asperiores obcaecati quidem tempore sed nam, unde ut ducimus voluptas possimus soluta assumenda nostrum commodi tenetur reprehenderit quos fuga. Explicabo eligendi libero doloribus. Aperiam reprehenderit expedita eius laboriosam modi aspernatur non repudiandae sapiente voluptatem deleniti labore necessitatibus rerum sunt tempore sequi inventore, officiis quae quis dolorem velit ut sint.
                 </p>
             </div>
-            <div class="image">
-                <img src="images/airforce 1.jpg" alt="airforce" style="width:100%">
-            </div>
+            
             
         </div>
         <div class="product2">
@@ -130,8 +145,46 @@
             </div>
         </div>
     </div>
+ 
+   
+    <table>
+        <h3>Comparison</h3>
+        <tr>
+        <th>Airforce</th>
+        <th>Airforce</th>
+        <th>Airforce</th>
+        </tr>
+        <tr>
+            <td>
+                
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae sunt enim suscipit explicabo iure ratione vitae eos, similique saepe officiis, soluta esse unde consequatur tenetur libero nobis quas eum obcaecati quis! Ipsum quisquam nulla sit ab quasi similique officiis consectetur vel non, rerum, incidunt odit tempore. Sed, inventore reiciendis. Sint?
+            </td>
+            <td>
+                
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae sunt enim suscipit explicabo iure ratione vitae eos, similique saepe officiis, soluta esse unde consequatur tenetur libero nobis quas eum obcaecati quis! Ipsum quisquam nulla sit ab quasi similique officiis consectetur vel non, rerum, incidunt odit tempore. Sed, inventore reiciendis. Sint?
+            </td>
+            <td>
+                
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae sunt enim suscipit explicabo iure ratione vitae eos, similique saepe officiis, soluta esse unde consequatur tenetur libero nobis quas eum obcaecati quis! Ipsum quisquam nulla sit ab quasi similique officiis consectetur vel non, rerum, incidunt odit tempore. Sed, inventore reiciendis. Sint?</td>
+            </tr>
+    </table>
 
-    <form action=""></form>
+
+    <div class="contactUs">
+        <a href="#contact" id="contact">Contact Us</a>
+        <p>Fill the form below so we get your message:</p>
+        <form action="/action_page.php">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required><br><br>
+    
+            <label for="name">Email</label>
+            <input type="email" id="email" name="email" required><br><br>
+    
+            <label for="name">Message</label>
+            <input type="text" id="message" name="message" required><br><br>
+        </form>
+        <button onclick="submit()">Submit</button>
+    </div>
 </body>
 <script src="script.js" defer></script>
 </html>
