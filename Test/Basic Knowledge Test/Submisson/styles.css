@@ -1,7 +1,157 @@
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {/*For small screens*/
 /* body {
     
 } */
+ nav{
+    display: none;
+ }
 
+
+}
+@media screen and (min-width: 768px) {
+*{
+    box-sizing:border-box;
+}
+
+/* body {
     
+} */
+ button{
+    display: none;
+ }
+nav{
+    background-color: aqua;
+    display: flex;
+    justify-content: flex-end;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+}
+li{
+    padding-right: 12px;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.carousel{
+    max-width: 1000px;
+    position:relative;
+    margin:auto;
+}
+.slideShow{
+    display:none;
+}
+.slideShow img{
+   height: 500px;
+   object-fit: cover;
+}
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.caption{
+    color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.products{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.products .product1{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 700px;
+    height: 371px;
+}
+.products .product2{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 700px;
+    height: 371px;
+}
+.products .product3{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 700px;
+    height: 371px;
+}
+.products .product4{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 700px;
+    height: 371px;
+}
+.products .product5{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 700px;
+    height: 371px;
+}
+.description{
+    width: 50%;
+    padding-left: 20px;  
+}
+.description h3{
+    margin: 0;
+}
+.description h5{
+    margin: 0;
+}
+.image{
+    width: 50%;
+}
+.image img{
+    border-radius: 15px;
+    height: 360px;
+}
+
 }
