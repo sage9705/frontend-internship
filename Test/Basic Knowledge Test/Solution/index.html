@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Product Showcase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -23,6 +24,7 @@
     <main>
         <section id="home">
             <h1>Welcome to Our Product Showcase</h1>
+            <p>Discover our amazing range of products below!</p>
         </section>
 
         <section id="products">
@@ -33,10 +35,12 @@
             </div>
         </section>
 
-        <section id="product-details">
+        <section id="product-details" class="hidden">
             <h2>Product Details</h2>
-            <div id="product-info"></div>
-            <div id="color-options"></div>
+            <div class="product-info-container">
+                <div id="product-info"></div>
+                <div id="color-options"></div>
+            </div>
             <div id="image-slideshow"></div>
         </section>
 
@@ -76,8 +80,8 @@
 
         <section id="about">
             <h2>About Us</h2>
-            <p>We are a company dedicated to providing high-quality products to our customers.</p>
-            <video width="320" height="240" controls>
+            <p>We are dedicated to providing high-quality products to our customers.</p>
+            <video width="100%" height="auto" controls>
                 <source src="./assets/company_video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -86,15 +90,21 @@
         <section id="contact">
             <h2>Contact Us</h2>
             <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <span class="error-message"></span>
+                </div>
                 <button type="submit">Send</button>
             </form>
         </section>
