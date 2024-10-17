@@ -237,16 +237,16 @@
         <a href="#contact" id="contact">Contact Us</a>
         <p>Fill the form below so we get your message:</p>
         <form action="/action_page.php">
-            <label for="name" >Name *</label><br>
+            <label for="name" >Name</label><br>
             <input type="text" id="name" name="name" required><br><br>
     
-            <label for="name" >Email * <span id="errorMessage"></span></label><br>
+            <label for="email" >Email <span id="errorMessage"></span></label><br>
             <input type="email" id="email" name="email" required><br><br>
     
             <label for="name">Message (not less than 1 word)</label><br>
-            <input type="text" id="message" name="message" required><br><br>
+            <input type="text" id="message" name="message" max-length="300" autocomplete="off" tabindex="100" value=" " onfocus="this.setSelectionRange(0,0)" required ><br><br>
         </form>
-        <button onclick="submit()">Submit</button>
+        <button class="submitButton" type="submit" onclick="validation()">Submit</button>
     </div>
 </body>
 <script src="script.js" defer></script>

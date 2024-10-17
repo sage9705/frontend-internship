@@ -172,20 +172,64 @@ margin-bottom: 10px;
 }
 form>input{
     border: 1px solid black;
-    border-radius: 3px;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 #name{
-    width: 250px;
+    width: 300px;
     height: 40px;
 }
+#name:focus{
+    border: 1px solid rgb(78, 107, 235);
+    outline-width: 0;
+}
 #email{
-    width: 250px;
+    width: 300px;
     height: 40px; 
 }
+#email:focus{
+    border: 1px solid rgb(132, 154, 248);
+    outline-width: 0;
+}
+#email:active:invalid{
+    border: 1px solid rgb(248, 152, 152);
+}
+#email:focus:invalid{
+    background-color: rgb(248, 181, 181);
+    color:rgb(243, 114, 114);
+    border: 1px solid rgb(248, 152, 152);
+}
+#email:invalid{
+    background-color: rgb(248, 181, 181);
+    color:rgb(243, 114, 114);
+    border: 1px solid rgb(248, 152, 152);
+}
 #message{
-    width: 250px;
+    width: 300px;
     height: 100px;
+}
+#message:focus{
+    border: 1px solid rgb(78, 107, 235);
+    outline-width: 0;
+}
+#errorMessage{
+    color:rgb(243, 114, 114);
+}
+.submitButton{
+    width: 310px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid rgb(0, 187, 255);
+    background-color: rgb(0, 187, 255);
+    color: rgb(61, 60, 60);
+    font-size: 18px;
+    font-weight: 200;
+}
+.submitButton:hover{
+background-color: rgb(121, 196, 246);
+color: black;
+border: 1px solid rgb(121, 196, 246);
 }
 }
 @media screen and (min-width: 768px) {
@@ -380,6 +424,15 @@ table, th, td{
 table{
 margin-bottom: 10px;
 }
+.contactUs{
+    padding-top: 20px;
+    padding-left: 120px;
+}
+#contact{
+    font-weight: 700;
+    font-size: x-large;
+    
+}
 form>input{
     border: 1px solid black;
     border-radius: 3px;
@@ -396,24 +449,33 @@ form>input{
 #name:focus{
     border: 1px solid rgb(78, 107, 235);
     outline-width: 0;
+    background-color: rgb(232, 236, 252);
 }
 #email{
     width: 500px;
     height: 40px; 
     background-color: white;
 }
-#email:focus{
-    border: 1px solid rgb(132, 154, 248);
-    outline-width: 0;
-}
 #email:active:invalid{
     border: 1px solid rgb(248, 152, 152);
 }
-#email:focus:invalid{
+#email:invalid:focus{
     background-color: rgb(248, 181, 181);
     color:rgb(243, 114, 114);
     border: 1px solid rgb(248, 152, 152);
 }
+#email:focus{
+    border: 1px solid rgb(132, 154, 248);
+    outline-width: 0;
+    background-color: rgb(232, 236, 252);
+}
+
+#email:invalid{
+    background-color: rgb(248, 181, 181);
+    color:rgb(243, 114, 114);
+    border: 1px solid rgb(248, 152, 152);
+}
+
 
 #message{
     width: 500px;
@@ -422,9 +484,27 @@ form>input{
 #message:focus{
     border: 1px solid rgb(78, 107, 235);
     outline-width: 0;
-    cursor: auto;
+    background-color: rgb(232, 236, 252);
 }
+/* #message:active{
+    cur
+} */
 #errorMessage{
     color:rgb(243, 114, 114);
+}
+.submitButton{
+    width: 500px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid rgb(0, 187, 255);
+    background-color: rgb(0, 187, 255);
+    color: rgb(61, 60, 60);
+    font-size: 18px;
+    font-weight: 200;
+}
+.submitButton:hover{
+background-color: rgb(121, 196, 246);
+color: black;
+border: 1px solid rgb(121, 196, 246);
 }
 }
