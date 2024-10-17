@@ -1,4 +1,4 @@
-// Sample product data
+// Sample product data with updated image references from assets folder
 const products = [
   {
     id: 1,
@@ -7,9 +7,9 @@ const products = [
     description: "Stay connected with our latest smartwatch",
     colors: ["black", "silver", "gold"],
     images: [
-      "assets/images/watch1.jpg",
-      "assets/images/watch2.jpg",
-      "assets/images/watch3.jpg",
+      "assets/images/watch1.jpeg",
+      "assets/images/watch2.jpeg",
+      "assets/images/watch3.jpeg",
     ],
   },
   {
@@ -65,6 +65,10 @@ const products = [
 // Function to render products
 function renderProducts(productsToRender) {
   const container = document.querySelector(".product-container");
+  if (!container) {
+    console.error("Product container not found");
+    return;
+  }
   container.innerHTML = "";
   productsToRender.forEach((product) => {
     const productElement = document.createElement("div");
@@ -79,7 +83,6 @@ function renderProducts(productsToRender) {
     container.appendChild(productElement);
   });
 }
-
 // Function to filter products
 function filterProducts() {
   const filterValue = document
