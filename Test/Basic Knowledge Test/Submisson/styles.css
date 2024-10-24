@@ -259,9 +259,9 @@ border: 1px solid rgb(121, 196, 246);
     box-sizing:border-box;
 }
 
-/* body {
-    
-} */
+body {
+    margin: 0;
+}
  
 nav{
     background-color: aqua;
@@ -347,44 +347,57 @@ a{
     to {opacity: 1}
 }
 
+.product{
+    display: flex;
+    flex-direction: column;
+}
 .products-first{
    margin: 50px 70px 50px 70px;
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   column-gap: 20px;
+   display: flex;
+   flex-direction: row;
    height: 500px;
 }
 .products-second{
     margin: 0 70px 50px 70px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-   column-gap: 20px;
+    display: flex;
+   flex-direction: row;
    height: 500px;
  }
  .products-third{
     margin: 0 70px 50px 70px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-   column-gap: 20px;
+    display: flex;
+   flex-direction: row;
    height: 500px;
  }
 
 .product1{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+   flex-direction: column;
     height: 500px;
  }
 .product2{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+   flex-direction: column;
     height: 500px;
  }
  .product3{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     height: 500px;
  }
 
+ .image{
+    width: 300px;
+    height: 200px;
+    
+}
+.image img{
+    border-radius: 15px;
+    width: 300px;
+    height: 200px;
+
+    /* object-fit: fill; */
+}
  
 #toggle{
     display: none;
@@ -438,18 +451,7 @@ a{
 .white{
     background-color: rgb(224, 222, 222);
 }
-.image{
-    width: 100%;
-    height: 300px;
-    
-}
-.image img{
-    border-radius: 15px;
-    width: 100%;
-    height: 300px;
 
-    /* object-fit: fill; */
-}
 
 table, th, td{
     border: 2px solid rgb(57, 117, 190);
@@ -528,11 +530,11 @@ form>input{
 } */
 
 
-#message{
+textarea{
     width: 500px;
     height: 100px;
 }
-#message:focus{
+textarea:focus{
     border: 1px solid rgb(78, 107, 235);
     outline-width: 0;
     background-color: rgb(232, 236, 252);
