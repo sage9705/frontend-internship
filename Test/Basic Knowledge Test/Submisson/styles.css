@@ -84,27 +84,49 @@ a{
 #toggle{
     display: none;
 }
-.product1{
-    padding: 10px 0 10px 0;
+.products{
+    display: block;
+    width: 300px;
 }
-.product2{
-    padding: 10px 0 10px 0;
-}
-.product3{
-    padding: 10px 0 10px 0;
-}
-.product4{
-    padding: 10px 0 10px 0;
-}
-.product5{
-    padding: 10px 0 10px 0;
-}
+/* .products-first{
+    display: block;
+    height: 500px;
+ }
+ .products-second{
+     margin: 0 70px 50px 70px;
+    display: block;
+    height: 500px;
+  }
+  .products-third{
+     margin: 0 70px 50px 70px;
+    display: block;
+    height: 500px;
+  } */
+ 
+ .product1{
+     display: grid;
+     grid-template-rows: 1fr 1fr;
+     width: 300px;
+  }
+ .product2{
+     display: grid;
+     grid-template-rows: 1fr 1fr;
+     height: 300px;
+  }
+  .product3{
+     display: grid;
+     grid-template-rows: 1fr 1fr;
+     height: 300px;
+  }
+ 
 .image{
-    width: 100%;
+    width: 300px;
 }
  .image img{
     border-radius: 20px 20px 0 0;
-    height: 400px;
+    height: 300px;
+    width: 300px;
+
  }
  .description{
     border-left: 1px solid black;
@@ -130,14 +152,14 @@ a{
 }
 .colorDots {
     cursor: pointer;
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     margin: 0 2px;
     border-radius: 50%;
     display: inline-block;
     
 }
-.colorDots:hover{
+.colorDots:active{
     border-radius: 5px;
     padding: 5px;
 }
@@ -325,51 +347,58 @@ a{
     to {opacity: 1}
 }
 
-.products{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.products-first{
+   margin: 50px 70px 50px 70px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   column-gap: 20px;
+   height: 500px;
 }
+.products-second{
+    margin: 0 70px 50px 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   column-gap: 20px;
+   height: 500px;
+ }
+ .products-third{
+    margin: 0 70px 50px 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   column-gap: 20px;
+   height: 500px;
+ }
 
+.product1{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 500px;
+ }
+.product2{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 500px;
+ }
+ .product3{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 500px;
+ }
+
+ 
 #toggle{
     display: none;
 }
-.products .product1{
-    display: flex;
-    flex-direction: row;
-    width: 710px;
-    height: 460px;
-    padding-top: 20px;
-}
-.products .product2{
-    display: flex;
-    flex-direction: row;
-    width: 710px;
-    height: 460px;
-}
-.products .product3{
-    display: flex;
-    flex-direction: row;
-    width: 710px;
-    height: 460px;
-}
-.products .product4{
-    display: flex;
-    flex-direction: row;
-    width: 710px;
-    height: 460px;
-}
-.products .product5{
-    display: flex;
-    flex-direction: row;
-    width: 710px;
-    height: 460px;
-}
+
 .description{
-    width: 50%;
-    padding-left: 20px;  
-    height: 420px;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    margin-top: 20px;
+    margin-bottom: 0;
+    height: 200px;
+}
+.description-section{
+   padding-left: 10px;
 }
 .description-section h3{
     margin: 0;
@@ -378,20 +407,19 @@ a{
     margin: 0;
 }
 .colors{
-    /* background-color: rgb(71, 206, 251); */
-    display: flex;
-    flex-direction: row;
-    height: 60px;
-    padding: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 10px;
+    width: 160px;
    
 }
 .colorDots {
     cursor: pointer;
     height: 30px;
     width: 30px;
-    margin: 0 2px;
+    /* margin: 0 0px; */
     border-radius: 50%;
-    display: inline-block;
+    /* display: inline-block; */
     
 }
 .colorDots:hover{
@@ -411,27 +439,49 @@ a{
     background-color: rgb(224, 222, 222);
 }
 .image{
-    width: 50%;
+    width: 100%;
+    height: 300px;
+    
 }
 .image img{
     border-radius: 15px;
-    height: 420px;
+    width: 100%;
+    height: 300px;
+
+    /* object-fit: fill; */
 }
 
 table, th, td{
-    border: 2px solid black;
+    border: 2px solid rgb(57, 117, 190);
+    color: rgb(23, 55, 70);
 }
 table{
 margin-bottom: 10px;
+margin-left: 120px;
+margin-right: 120px;
+
+}
+.comparison{
+    font-size: x-large;
+    text-transform: uppercase;
+    margin-left: 120px;
+    color: rgb(83, 133, 196);
 }
 .contactUs{
-    padding-top: 20px;
+    padding-top: 50px;
     padding-left: 120px;
+    
 }
 #contact{
     font-weight: 700;
     font-size: x-large;
+    text-transform: uppercase;
+    color: rgb(83, 133, 196);
+
     
+}
+form{
+    margin: 0 200px 0 200px;
 }
 form>input{
     border: 1px solid black;
@@ -456,6 +506,11 @@ form>input{
     height: 40px; 
     background-color: white;
 }
+#email:focus{
+    border: 1px solid rgb(132, 154, 248);
+    outline-width: 0;
+    background-color: rgb(232, 236, 252);
+}
 #email:active:invalid{
     border: 1px solid rgb(248, 152, 152);
 }
@@ -464,17 +519,13 @@ form>input{
     color:rgb(243, 114, 114);
     border: 1px solid rgb(248, 152, 152);
 }
-#email:focus{
-    border: 1px solid rgb(132, 154, 248);
-    outline-width: 0;
-    background-color: rgb(232, 236, 252);
-}
 
-#email:invalid{
+
+/* #email:invalid{
     background-color: rgb(248, 181, 181);
     color:rgb(243, 114, 114);
     border: 1px solid rgb(248, 152, 152);
-}
+} */
 
 
 #message{
@@ -501,6 +552,7 @@ form>input{
     color: rgb(61, 60, 60);
     font-size: 18px;
     font-weight: 200;
+    margin: 0 200px 0 200px;
 }
 .submitButton:hover{
 background-color: rgb(121, 196, 246);
