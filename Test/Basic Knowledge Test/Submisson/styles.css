@@ -254,6 +254,7 @@ color: black;
 border: 1px solid rgb(121, 196, 246);
 }
 }
+
 @media screen and (min-width: 768px) {
 *{
     box-sizing:border-box;
@@ -352,44 +353,21 @@ a{
     display: flex;
     flex-direction: column;
     padding: 50px 50px 0px 50px;
-    width: 100%;
+    /* width: 100%; */
 }
-.products-first{
+.products-first, .products-second, .products-third{
    display: flex;
    flex: 1;
    flex-direction: row;
    width: 100%;
 }
-.products-second{
+.product1, .product2, .product3{
     display: flex;
+   flex-direction: column;
    width: 100%;
-   flex: 1;
-   flex-direction: row;
- }
- .products-third{
-    display: flex;
-    flex: 1;
-   flex-direction: row;
-   width: 100%;
+   padding-right: 20px;
  }
 
-.product1{
-    display: flex;
-   flex-direction: column;
-   width: 100%;
-   padding-right: 20px;
- }
-.product2{
-    display: flex;
-   flex-direction: column;
-   width: 100%;
-   padding-right: 20px;
- }
- .product3{
-    display: flex;
-    flex-direction: column;
-   width: 100%;
- }
 
  .image{
     height: 250px;
@@ -416,10 +394,7 @@ a{
 .description-section{
    padding-left: 10px;
 }
-.description-section h3{
-    margin: 0;
-}
-.description-section h5{
+.description-section h3, .description-section h5{
     margin: 0;
 }
 .colors{
@@ -493,9 +468,6 @@ form>input{
     border-radius: 3px;
 }
 
-/* #email:invalid{
-    border: 1px solid rgb(248, 152, 152);
-} */
 
 #name{
     width: 500px;
@@ -524,7 +496,6 @@ form>input{
     color:rgb(243, 114, 114);
     border: 1px solid rgb(248, 152, 152);
 }
-
 
 textarea{
     width: 500px;
@@ -557,3 +528,4 @@ border: 1px solid rgb(121, 196, 246);
 cursor: pointer;
 }
 }
+
