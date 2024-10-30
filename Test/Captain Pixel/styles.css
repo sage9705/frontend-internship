@@ -121,7 +121,6 @@ body{
 }
 .codePerfect{
     margin: 30px 200px;
-
 }
 .sCoding, .shield, .perfection, .intuition{
     background-color: rgba(249, 250,253, 1);
@@ -148,7 +147,6 @@ body{
 }
 .huntwennyfi{
     margin: 50px 300px;
-    /* border: 1px solid red; */
 }
 .hunplus, .fiftykay, .twenfiplus{
     border-radius: 10px;
@@ -219,20 +217,12 @@ body{
 }
 
 
-.Gallery h1{
-
-}
-.Gallery p{
- 
-}
-
 .webShield{
     display: grid;
     grid-template-columns: 2fr 1fr;
     padding: 0 200px;
     column-gap: 20px;
     row-gap: 20px;
-    
 }
 
 .webShield h4{
@@ -324,4 +314,45 @@ footer p{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
+}
+
+@media (min-width: 678px) and (max-width: 1050px) {
+    .webShield{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        padding: 0 50px;
+        /* margin: 0 50px; */
+        
+    }
+    .webrescue{
+        height: 300px;
+        width: 350px;
+        justify-self: end;
+    }
+    .secureShield{
+        justify-self: center;
+
+        
+    }
+    .secureShield, .codeClean{
+        height: 200px;
+        width: 200px;
+    }
+
+    .huntwennyfi, .codePerfect{
+        margin: 20px 160px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+@media (max-width)){
+    .webShield{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .webrescue, .codeClean, .secureShield{
+        height: 300px;
+        width: 300px;
+    }
 }
