@@ -28,7 +28,6 @@ body{
     display: flex;
     flex: 1;
     flex-direction: row;
-    position: relative;
 }
 .navigation ul{
     display: flex;
@@ -45,16 +44,20 @@ body{
     background-image: linear-gradient(to bottom right, rgba(32, 29, 83, 1), rgba(44, 39, 127, 1), rgba(62, 52, 184, 1), rgba(66, 55, 197, 1));
     /* border: 1px solid red; */
     height: 690px;
+    position: relative;
 }
 .writing{
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* border: 1px solid red; */
-    align-items: center;
-    padding-left: 320px;
+    align-items: start;
+    /* padding-left: 200px; */
+    flex: 1;
+    position: absolute;
+    left: 200px;
+    top: 200px;
 }
-
 .defender{
     border-radius: 20px;
     border: none;
@@ -270,7 +273,6 @@ body{
 form{
     display: flex;
     flex-direction: column;
-    
     border: 1px solid rgba(91, 78,175, 1);
     border-radius: 10px;
     padding: 20px;
@@ -294,6 +296,9 @@ form button{
     padding: 10px;
     cursor: pointer;
 }
+textarea::placeholder{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 
 footer{
@@ -315,6 +320,10 @@ footer p{
     -webkit-text-fill-color: transparent;
     font-weight: bold;
 }
+.contactForces, .quickLinks{
+    display: grid;
+    justify-content: center;
+}
 
 @media (min-width: 678px) and (max-width: 1050px) {
     .webShield{
@@ -322,8 +331,6 @@ footer p{
         grid-template-columns: 1fr 1fr;
         column-gap: 20px;
         padding: 0 50px;
-        /* margin: 0 50px; */
-        
     }
     .webrescue{
         height: 300px;
@@ -332,8 +339,6 @@ footer p{
     }
     .secureShield{
         justify-self: center;
-
-        
     }
     .secureShield, .codeClean{
         height: 200px;
@@ -344,15 +349,55 @@ footer p{
         margin: 20px 160px;
         grid-template-columns: 1fr 1fr;
     }
+    .cP{
+        padding-left: 100px;
+    }
 
 }
-@media (max-width)){
-    .webShield{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+@media (max-width:677px){
+    .cP{
+        padding-left: 20px;
     }
-    .webrescue, .codeClean, .secureShield{
-        height: 300px;
-        width: 300px;
+    .webShield, .huntwennyfi, .codePerfect{
+        display: block;
+        padding: 20px 50px;
+    }
+    .secureShield, .codeClean, .webrescue{
+        height: 200px;
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    .secureShield{
+        margin-bottom: 0;
+    }
+    .emergency{
+        padding-right: 10px;
+        bottom: -3px;
+    }
+    .missionStats{
+        height: 900px;
+    }
+    .huntwennyfi,.codePerfect{
+        margin: 0 ;
+    }
+    .huntwennyfi{
+        margin: 10px 80px;
+    }
+    form input, textarea{
+        width: 250px;
+    }
+    .rescue2024, .operation2023 {
+        width: 110px;
+        height: 128px;
+    }
+    .yearOperation{
+        height: 400px;
+
+    }
+    .operation2023{
+        bottom: 20px;
+    }
+    footer{
+        padding: 10px 20px;
     }
 }
